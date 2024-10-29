@@ -335,7 +335,7 @@ def download_file(info, folder):
     
 
 
-info['access_token'] = get_access_tokens(tenant_id, client_id, client_secret, info['sharepoint'])
+info['access_token'] = get_access_tokens(tenant_id, client_id, client_secret, info['sharepoint'].split('://')[-1])
 current_directory = ''
 while(1):
     try:
